@@ -16,11 +16,12 @@ def slow_type_EXTRA(t):
         time.sleep(random.random()*7.0/typing_speed)
     print ('')
 
-class enemy_name(object):
+class Entity(object):
+    name = ""
+    type = ""
     health = 50
     strength = 7
     defence = 3
-    loot = random.randint(0,10)
 
 #3 Main Classes
 class rogue (object):
@@ -76,7 +77,7 @@ def heroselect():
         heroselect()
 
 def battlestate():
-    enemy = enemy_name
+    enemy = Entity
     print("a wild", enemy, "has appeared!")
     print ("you have 3 options...")
     while enemy.health > 0 :
